@@ -15,7 +15,7 @@ struct ChosenMood: View {
                 .multilineTextAlignment(.center)
                 .padding(.bottom, 50)
                 .foregroundColor(.colorM1).bold()
-                .offset(y:-10)
+                .offset(y:10)
             
             ZStack{
                 Rectangle()
@@ -33,7 +33,8 @@ struct ChosenMood: View {
                 
             
             Text("This mood is shown by kind words,calm\ntones, favouring kindness, avoiding\naggression, and creating a positive, welcoming atmosphere")
-                .offset(y: 50)
+                .offset(y: 28)
+                .padding(.bottom,40)
         }
     }
 }

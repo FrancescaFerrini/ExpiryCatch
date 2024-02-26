@@ -34,7 +34,7 @@ struct Onboarding2: View {
                         }
                 }
             }
-            .padding(.top, 60)
+            .padding(.bottom,100)
         }
     }
     
