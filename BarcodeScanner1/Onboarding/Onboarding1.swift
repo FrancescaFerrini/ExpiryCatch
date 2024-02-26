@@ -2,7 +2,7 @@
 //  Onboarding1.swift
 //  BarcodeScanner1
 //
-//  Created by Francesca Ferrini on 24/02/24.
+//  Created by Salvatore Flauto on 26/02/24.
 //
 
 import SwiftUI
@@ -23,13 +23,13 @@ struct Onboarding1: View {
                     .foregroundColor(.color1)
                     .offset(y:-50)
                     .padding(.top, 61)
-                    
+                
                 
                 Text("  so you never forget to use foods!")
                     .font(.system(size: 20))
                     .padding(.top,-55)
                     .multilineTextAlignment(.center)
-                    
+                
                 VStack(spacing: 50){
                     VStack(spacing: 40){
                         ZStack{
@@ -51,15 +51,10 @@ struct Onboarding1: View {
                                         .bold()
                                         .padding(.leading, -117)
                                     
-                                        
+                                    
                                     Text("The pasta is about to expire 🥲")
-                                        
+                                    
                                 }.rotationEffect(Angle(degrees: -2))
-                                    
-                                    
-                                
-                                    
-                                    
                             }
                         }
                         
@@ -82,11 +77,11 @@ struct Onboarding1: View {
                                         .bold()
                                         .padding(.leading, -117)
                                     
-                                        
-                                    Text("The pasta is about to expire 🥲")
-                                        
-                                }.rotationEffect(Angle(degrees: 2))
                                     
+                                    Text("The pasta is about to expire 🥲")
+                                    
+                                }.rotationEffect(Angle(degrees: 2))
+                                
                             }
                         }
                         ZStack{
@@ -108,11 +103,11 @@ struct Onboarding1: View {
                                         .bold()
                                         .padding(.leading, -117)
                                     
-                                        
-                                    Text("The pasta is about to expire 🥲")
-                                        
-                                }.rotationEffect(Angle(degrees: -2))
                                     
+                                    Text("The pasta is about to expire 🥲")
+                                    
+                                }.rotationEffect(Angle(degrees: -2))
+                                
                             }
                         }
                         ZStack{
@@ -134,11 +129,11 @@ struct Onboarding1: View {
                                         .bold()
                                         .padding(.leading, -117)
                                     
-                                        
-                                    Text("The pasta is about to expire 🥲")
-                                        
-                                }.rotationEffect(Angle(degrees: 2))
                                     
+                                    Text("The pasta is about to expire 🥲")
+                                    
+                                }.rotationEffect(Angle(degrees: 2))
+                                
                             }
                         }
                     }

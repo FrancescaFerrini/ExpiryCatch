@@ -1,3 +1,9 @@
+//
+//  ProductDetailView.swift
+//  BarcodeScanner1
+//
+//  Created by Salvatore Flauto on 26/02/24.
+//
 
 
 
@@ -17,9 +23,7 @@ struct ProductDetailView: View {
                 Text("Nutrition grade: \(food.nutritionGrades ?? "nutrition grade not found")")
                 Text("Expiration Date: \(food.expirationDate ?? "expiration date not found")")
                 
-            }  
+            }
         }
     }
 }
-
-

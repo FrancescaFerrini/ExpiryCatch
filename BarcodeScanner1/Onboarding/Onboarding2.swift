@@ -2,7 +2,7 @@
 //  Onboarding2.swift
 //  BarcodeScanner1
 //
-//  Created by Francesca Ferrini on 24/02/24.
+//  Created by Salvatore Flauto on 26/02/24.
 //
 
 import SwiftUI
