@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		179B93C32B8E24C70023480E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179B93C22B8E24C70023480E /* ContentView.swift */; };
 		2711A3352B87877800EB94C2 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711A3342B87877800EB94C2 /* Onboarding.swift */; };
 		2711A3652B888CC500EB94C2 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711A3642B888CC500EB94C2 /* ScannerView.swift */; };
 		2711A3672B888D2700EB94C2 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711A3662B888D2700EB94C2 /* ModalView.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		179B93C22B8E24C70023480E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2711A3342B87877800EB94C2 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		2711A3642B888CC500EB94C2 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
 		2711A3662B888D2700EB94C2 /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				278C8FC82B84B3270002AC5E /* TabController.swift */,
+				179B93C22B8E24C70023480E /* ContentView.swift */,
 			);
 			path = TabController;
 			sourceTree = "<group>";
@@ -94,8 +97,8 @@
 		27192F0F2B88F903001999D6 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				2711A3342B87877800EB94C2 /* Onboarding.swift */,
 				27192F0D2B88F8EC001999D6 /* TabOnboarding.swift */,
+				2711A3342B87877800EB94C2 /* Onboarding.swift */,
 				F5DE9EA72B8CDB9600E40374 /* Onboarding1.swift */,
 				F5DE9EA92B8CDBAA00E40374 /* Onboarding2.swift */,
 			);
@@ -247,6 +250,7 @@
 				278C8FA92B84AAD60002AC5E /* BarcodeScanner1App.swift in Sources */,
 				27192F0A2B88CDE1001999D6 /* Product.swift in Sources */,
 				F5DE9EAF2B8CDD8800E40374 /* ChosenMood1.swift in Sources */,
+				179B93C32B8E24C70023480E /* ContentView.swift in Sources */,
 				F5DE9EAD2B8CDD6C00E40374 /* ChosenMood.swift in Sources */,
 				2711A3672B888D2700EB94C2 /* ModalView.swift in Sources */,
 				2711A3652B888CC500EB94C2 /* ScannerView.swift in Sources */,

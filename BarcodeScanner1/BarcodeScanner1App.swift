@@ -1,4 +1,4 @@
-
+// FS
 
 import SwiftUI
 import SwiftData
@@ -21,7 +21,7 @@ struct BarcodeScanner1App: App {
 
     var body: some Scene {
         WindowGroup {
-            TabOnboarding()
+            ContentView()
         }
         .modelContainer(sharedModelContainer)
     }

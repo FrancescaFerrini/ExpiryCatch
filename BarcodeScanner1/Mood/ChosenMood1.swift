@@ -26,7 +26,7 @@ struct ChosenMood1: View {
                     .frame(width: 197,height: 123)
             }
             
-            Text("Calm")
+            Text("Hot")
                 .font(.system(size: 35))
                 .multilineTextAlignment(.center)
                 .foregroundColor(.colorM2).bold()
