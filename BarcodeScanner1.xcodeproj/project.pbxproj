@@ -47,6 +47,7 @@
 		278C8FAF2B84AAD70002AC5E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		278C8FC82B84B3270002AC5E /* TabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabController.swift; sourceTree = "<group>"; };
 		278C8FCA2B84B3760002AC5E /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		F5B25D432B8CF5B200813E65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		F5DE9EA52B8CDAF800E40374 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
 		F5DE9EA72B8CDB9600E40374 /* Onboarding1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding1.swift; sourceTree = "<group>"; };
 		F5DE9EA92B8CDBAA00E40374 /* Onboarding2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding2.swift; sourceTree = "<group>"; };
@@ -121,6 +122,7 @@
 		278C8FA72B84AAD60002AC5E /* BarcodeScanner1 */ = {
 			isa = PBXGroup;
 			children = (
+				F5B25D432B8CF5B200813E65 /* Info.plist */,
 				278C8FA82B84AAD60002AC5E /* BarcodeScanner1App.swift */,
 				2711A3622B888C1200EB94C2 /* TabController */,
 				2711A3632B888C3600EB94C2 /* View */,
@@ -387,8 +389,7 @@
 				DEVELOPMENT_TEAM = JZX85Z36BA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Expiry catch";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
+				INFOPLIST_FILE = BarcodeScanner1/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "To capture product photos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -421,8 +422,7 @@
 				DEVELOPMENT_TEAM = JZX85Z36BA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "Expiry catch";
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
+				INFOPLIST_FILE = BarcodeScanner1/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "To capture product photos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
