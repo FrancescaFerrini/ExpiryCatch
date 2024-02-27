@@ -29,6 +29,7 @@ struct ModalView: View {
                         Button("Save") {
                             saved = SavedFoodModel(productName: productResponse?.product?.productName, imageUrl: productResponse?.product?.image, nutritionGrades: productResponse?.product?.nutritionGrades, expirationDate: productResponse?.product?.expirationDate)
                             savedProduct.savedFoods.append(saved!)
+                            savedProduct.saveProduct(saved!)
                             presentationMode.wrappedValue.dismiss()
                             isShowingScanner = true
                         }

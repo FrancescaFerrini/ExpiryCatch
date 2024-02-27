@@ -383,7 +383,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BarcodeScanner1/Preview Content\"";
-				DEVELOPMENT_TEAM = Z4SW228TF7;
+				DEVELOPMENT_TEAM = 3B6HLC87UZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "To capture product photos";
@@ -413,7 +413,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BarcodeScanner1/Preview Content\"";
-				DEVELOPMENT_TEAM = Z4SW228TF7;
+				DEVELOPMENT_TEAM = 3B6HLC87UZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "To capture product photos";

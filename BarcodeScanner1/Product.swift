@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import UserNotifications
+
 struct Product: Codable {
     let productName: String?
     let nutriments: Nutriments?
@@ -104,7 +106,7 @@ class SavedFoodViewModel: ObservableObject, Identifiable{
                         let result = try decoder.decode(ProductResponse.self, from: data)
                         
                         // Check if product exists before updating
-                        if let product = result.product {
+                        if result.product != nil {
                             self.productResponse = result
                         } else {
                             print("Product not found")
@@ -118,6 +120,61 @@ class SavedFoodViewModel: ObservableObject, Identifiable{
             task.resume()
         } else {
             print("Invalid API URL")
+        }
+    }
+    
+    func saveProduct(_ product: SavedFoodModel) {
+        scheduleImmediateNotification(for: product)
+        scheduleExpirationNotification(for: product)
+    }
+
+    func scheduleImmediateNotification(for product: SavedFoodModel) {
+        let immediateContent = UNMutableNotificationContent()
+        immediateContent.title = "Product Saved"
+        immediateContent.body = "\(product.productName ?? "Your product") has been saved."
+
+        let immediateTrigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        let immediateRequest = UNNotificationRequest(identifier: "\(product.id.uuidString)_immediate", content: immediateContent, trigger: immediateTrigger)
+
+        UNUserNotificationCenter.current().add(immediateRequest) { error in
+            if let error = error {
+                print("Error scheduling immediate notification for \(product.productName ?? "Unknown"): \(error.localizedDescription)")
+            } else {
+                print("Immediate notification scheduled for \(product.productName ?? "Unknown")")
+            }
+        }
+    }
+
+    func scheduleExpirationNotification(for product: SavedFoodModel) {
+        guard let expirationDateString = product.expirationDate else {
+            print("Expiration date not available for product: \(product.productName ?? "Unknown")")
+            return
+        }
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        
+        
+        
+        if let expirationDate = dateFormatter.date(from: expirationDateString) {
+            let expirationContent = UNMutableNotificationContent()
+            expirationContent.title = "Product Expiration Reminder"
+            expirationContent.body = "\(product.productName ?? "Your product") is expiring tomorrow!"
+
+            let triggerDate = Calendar.current.date(byAdding: .day, value: -1, to: expirationDate)!
+            let expirationTrigger = UNCalendarNotificationTrigger(dateMatching: Calendar.current.dateComponents([.year, .month, .day], from: triggerDate), repeats: false)
+
+            let expirationRequest = UNNotificationRequest(identifier: "\(product.id.uuidString)_expiration", content: expirationContent, trigger: expirationTrigger)
+
+            UNUserNotificationCenter.current().add(expirationRequest) { error in
+                if let error = error {
+                    print("Error scheduling expiration notification for \(product.productName ?? "Unknown"): \(error.localizedDescription)")
+                } else {
+                    print("Expiration notification scheduled for \(product.productName ?? "Unknown")")
+                }
+            }
+        } else {
+            print("Failed to parse expiration date for product: \(product.productName ?? "Unknown")")
         }
     }
 }
