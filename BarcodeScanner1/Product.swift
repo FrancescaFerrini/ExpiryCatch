@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import SwiftData
+
 struct Product: Codable {
     let productName: String?
     let nutriments: Nutriments?
@@ -73,9 +75,10 @@ struct NutriscoreData: Codable {
     }
 }
 
+
 class SavedFoodViewModel: ObservableObject, Identifiable{
-    @Published var savedFoods: [SavedFoodModel] = []
-    @Published var productResponse: ProductResponse?
+//    @Published var savedFoods: [SavedFoodModel] = []
+//    @Published var productResponse: ProductResponse?
     
     init() {
         
@@ -122,13 +125,20 @@ class SavedFoodViewModel: ObservableObject, Identifiable{
     }
 }
 
-
-struct SavedFoodModel: Hashable, Identifiable {
-    let id: UUID = UUID()
-    let productName: String?
-    let imageUrl: URL?
-    let nutritionGrades: String?
-    let expirationDate: String?
+@Model
+class SavedFoodModel: Hashable, Identifiable {
+    var id: UUID = UUID()
+    var productName: String?
+    var imageUrl: URL?
+//    let nutritionGrades: String?
+    var expirationDate: String?
+    
+    init(id: UUID, productName: String? = nil, imageUrl: URL? = nil, expirationDate: String? = nil) {
+        self.id = id
+        self.productName = productName
+        self.imageUrl = imageUrl
+        self.expirationDate = expirationDate
+    }
     
 }
 

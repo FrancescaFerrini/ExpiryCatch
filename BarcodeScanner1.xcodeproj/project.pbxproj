@@ -128,9 +128,9 @@
 				2711A3632B888C3600EB94C2 /* View */,
 				278C8FAC2B84AAD70002AC5E /* Assets.xcassets */,
 				2711A3682B888DC800EB94C2 /* Item.swift */,
+				27192F092B88CDE1001999D6 /* Product.swift */,
 				278C8FAE2B84AAD70002AC5E /* Preview Content */,
 				27192F0F2B88F903001999D6 /* Onboarding */,
-				27192F092B88CDE1001999D6 /* Product.swift */,
 				F5DE9EAB2B8CDD5400E40374 /* Mood */,
 			);
 			path = BarcodeScanner1;

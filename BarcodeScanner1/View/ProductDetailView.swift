@@ -20,7 +20,7 @@ struct ProductDetailView: View {
                 Text(food.productName ?? "")
                     .font(.title)
                     .padding()
-                Text("Nutrition grade: \(food.nutritionGrades ?? "nutrition grade not found")")
+//                Text("Nutrition grade: \(food.nutritionGrades ?? "nutrition grade not found")")
                 Text("Expiration Date: \(food.expirationDate ?? "expiration date not found")")
                 
             }

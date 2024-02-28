@@ -1,5 +1,6 @@
 import SwiftUI
 import AVFoundation
+import SwiftData
 
 struct ModalView: View {
     @Binding var isShowingScanner: Bool
@@ -8,6 +9,7 @@ struct ModalView: View {
     @State var saved: SavedFoodModel?
     @Binding var scannedCode: String?
     @Environment(\.presentationMode) var presentationMode
+    @Environment (\.modelContext) var context
     
     var body: some View {
         VStack {
@@ -27,10 +29,12 @@ struct ModalView: View {
                         
                     } else {
                         Button("Save") {
-                            saved = SavedFoodModel(productName: productResponse?.product?.productName, imageUrl: productResponse?.product?.image, nutritionGrades: productResponse?.product?.nutritionGrades, expirationDate: productResponse?.product?.expirationDate)
+                            saved = SavedFoodModel(productName: productResponse?.product?.productName, imageUrl: productResponse?.product?.image, expirationDate: productResponse?.product?.expirationDate,
+                                productResponse?.product?.id)
                             savedProduct.savedFoods.append(saved!)
                             presentationMode.wrappedValue.dismiss()
                             isShowingScanner = true
+                            context.insert(saved)
                         }
                         .padding()
                     }
@@ -38,7 +42,9 @@ struct ModalView: View {
         .onAppear {
             fetchProductDataIfNeeded()
         }
+        
     }
+    
         private var productNameView: some View {
             if let productName = productResponse?.product?.productName {
                 return Text("Product Name: \(productName)")
@@ -74,4 +80,8 @@ struct ModalView: View {
                 print("ERRORRRR")
             }
         }
+}
+#Preview {
+    ModalView(isShowingScanner:, productResponse: <#Binding<ProductResponse?>#>, savedProduct: <#SavedFoodViewModel#>, scannedCode: <#Binding<String?>#>)
+        .modelContainer(for: [SavedFoodModel.self])
 }
