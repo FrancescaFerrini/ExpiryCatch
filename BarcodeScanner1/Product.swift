@@ -77,8 +77,8 @@ struct NutriscoreData: Codable {
 
 
 class SavedFoodViewModel: ObservableObject, Identifiable{
-//    @Published var savedFoods: [SavedFoodModel] = []
-//    @Published var productResponse: ProductResponse?
+    @Published var savedFoods: [SavedFoodModel] = []
+    @Published var productResponse: ProductResponse?
     
     init() {
         
@@ -133,8 +133,7 @@ class SavedFoodModel: Hashable, Identifiable {
 //    let nutritionGrades: String?
     var expirationDate: String?
     
-    init(id: UUID, productName: String? = nil, imageUrl: URL? = nil, expirationDate: String? = nil) {
-        self.id = id
+    init(productName: String? = nil, imageUrl: URL? = nil, expirationDate: String? = nil) {
         self.productName = productName
         self.imageUrl = imageUrl
         self.expirationDate = expirationDate
