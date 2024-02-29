@@ -12,6 +12,7 @@ struct ModalView: View {
     @Environment (\.modelContext) var context
     @Environment(\.dismiss) var dismiss
     
+    
     var body: some View {
         VStack {
             Text("Scanned Code:")
@@ -33,11 +34,11 @@ struct ModalView: View {
                 Button(action: save, label: {
                     Text("Save")
                 })
-                .task {
-                    fetchProductDataIfNeeded()
+                
                 }
             }
-                
+        .onAppear {
+            fetchProductDataIfNeeded()
         }
     }
     
@@ -85,6 +86,7 @@ struct ModalView: View {
         if let savedFood = saved {
             savedProduct.savedFoods.append(savedFood)
             context.insert(savedFood)
+            print("Confermo salvataggio")
         }
         presentationMode.wrappedValue.dismiss()
         isShowingScanner = true

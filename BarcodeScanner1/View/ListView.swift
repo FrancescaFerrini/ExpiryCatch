@@ -6,15 +6,18 @@
 //
 
 import SwiftUI
+import SwiftData
 
 
 struct ListView: View {
+    @Query var savedBarcode: [SavedFoodModel]
     
-        @ObservedObject var savedProduct: SavedFoodViewModel
+    @ObservedObject var savedProduct: SavedFoodViewModel
+    
         var body: some View {
             NavigationStack {
                 ScrollView {
-                    ForEach(savedProduct.savedFoods, id: \.self) { food in
+                    ForEach(savedBarcode, id: \.self) { food in
                         VStack(alignment: .leading) {
                             
                             NavigationLink {
