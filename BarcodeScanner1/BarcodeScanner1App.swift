@@ -21,7 +21,7 @@ struct BarcodeScanner1App: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ListView(savedProduct: SavedFoodViewModel())
         }
         .modelContainer(sharedModelContainer)
     }

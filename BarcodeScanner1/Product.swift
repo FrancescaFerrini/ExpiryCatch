@@ -7,6 +7,7 @@
 
 import Foundation
 import UserNotifications
+import SwiftUI
 
 struct Product: Codable {
     let productName: String?
@@ -154,9 +155,10 @@ class SavedFoodViewModel: ObservableObject, Identifiable{
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         
+        print("try")
         
-        
-        if let expirationDate = dateFormatter.date(from: expirationDateString) {
+        if let expirationDate = product.expirationDate {
+            print("yrt")
             let expirationContent = UNMutableNotificationContent()
             expirationContent.title = "Product Expiration Reminder"
             expirationContent.body = "\(product.productName ?? "Your product") is expiring tomorrow!"
@@ -185,9 +187,6 @@ struct SavedFoodModel: Hashable, Identifiable {
     let productName: String?
     let imageUrl: URL?
     let nutritionGrades: String?
-    let expirationDate: String?
+    let expirationDate: Date?
     
 }
-
-
-

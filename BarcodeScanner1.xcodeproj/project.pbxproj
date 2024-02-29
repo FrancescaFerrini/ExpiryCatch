@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		173673AF2B90980E000E627D /* ImageHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173673AE2B90980E000E627D /* ImageHandler.swift */; };
 		179B93C32B8E24C70023480E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179B93C22B8E24C70023480E /* ContentView.swift */; };
 		2711A3352B87877800EB94C2 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711A3342B87877800EB94C2 /* Onboarding.swift */; };
 		2711A3652B888CC500EB94C2 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2711A3642B888CC500EB94C2 /* ScannerView.swift */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		173673AE2B90980E000E627D /* ImageHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHandler.swift; sourceTree = "<group>"; };
 		179B93C22B8E24C70023480E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2711A3342B87877800EB94C2 /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		2711A3642B888CC500EB94C2 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				278C8FAE2B84AAD70002AC5E /* Preview Content */,
 				27192F0F2B88F903001999D6 /* Onboarding */,
 				27192F092B88CDE1001999D6 /* Product.swift */,
+				173673AE2B90980E000E627D /* ImageHandler.swift */,
 				F5DE9EAB2B8CDD5400E40374 /* Mood */,
 			);
 			path = BarcodeScanner1;
@@ -245,6 +248,7 @@
 				F5DE9EA62B8CDAF800E40374 /* ProductDetailView.swift in Sources */,
 				F5DE9EA82B8CDB9600E40374 /* Onboarding1.swift in Sources */,
 				2711A3352B87877800EB94C2 /* Onboarding.swift in Sources */,
+				173673AF2B90980E000E627D /* ImageHandler.swift in Sources */,
 				27192F0E2B88F8EC001999D6 /* TabOnboarding.swift in Sources */,
 				F5DE9EAA2B8CDBAA00E40374 /* Onboarding2.swift in Sources */,
 				278C8FA92B84AAD60002AC5E /* BarcodeScanner1App.swift in Sources */,
